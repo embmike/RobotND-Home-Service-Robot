@@ -6,7 +6,7 @@ This project is part of my robotics nano degree of[ Udacity](https://www.udacity
 
 ### Example
 
-+ ** robot transports an item**
+** robot transports an item**
 <img src="./media/navigate_robot.gif" width="80%" height="80%" />
 
 <br>
@@ -15,7 +15,7 @@ This project is part of my robotics nano degree of[ Udacity](https://www.udacity
 - /src/add_markers/* : add and delete a item
 - /src/pick_objects/* : send location of the pick-up zone and drop-off zone
 - /src/turtlebot_* /* : the robot
-- src/slam_gmapping/* : the slam algorithm
+- /src/slam_gmapping/* : the slam algorithm
 
 
 ### Project tree with important files and diretories
