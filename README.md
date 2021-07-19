@@ -7,19 +7,19 @@ This project is part of my robotics nano degree of[ Udacity](https://www.udacity
 ### Example
 
 + ** robot transports an item**
-<img src="./media/navigate_robot.gif.gif" width="80%" height="80%" />
+<img src="./media/navigate_robot.gif" width="80%" height="80%" />
 
 <br>
 
 ## Important files
-- /src/add_markers* : add and delete a item
-- /src/pick_objects* : send location of the pick-up zone and drop-off zone
-- /src/turtlebot_*/* : the robot
+- /src/add_markers/* : add and delete a item
+- /src/pick_objects/* : send location of the pick-up zone and drop-off zone
+- /src/turtlebot_* /* : the robot
 - src/slam_gmapping/* : the slam algorithm
 
 
-### Project tree
-<img src="./media/project_tree.PNG" width="60%" height="60%" /> 
+### Project tree with important files and diretories
+<img src="./media/project_tree.PNG" width="70%" height="70%" /> 
 
 <br>
   
