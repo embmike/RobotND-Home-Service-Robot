@@ -4,9 +4,7 @@ A robot transports an item from a pick-up station to a delivery station. The rob
 
 This project is part of my robotics nano degree of[ Udacity](https://www.udacity.com/course/robotics-software-engineer--nd209). 
 
-### Example
-
-** robot transports an item**
+### Example: The Robot transports an item
 <img src="./media/navigate_robot.gif" width="80%" height="80%" />
 
 <br>
