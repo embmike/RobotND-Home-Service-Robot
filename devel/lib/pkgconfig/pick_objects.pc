@@ -1,0 +1,8 @@
+prefix=/home/robond/projects/Robo-ND/RobotND-Home-Service-Robot/devel
+
+Name: pick_objects
+Description: Description of pick_objects
+Version: 0.0.0
+Cflags: -I/home/robond/projects/Robo-ND/RobotND-Home-Service-Robot/devel/include
+Libs: -L${prefix}/lib 
+Requires: 

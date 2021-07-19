@@ -1,0 +1,8 @@
+prefix=/home/robond/projects/Robo-ND/RobotND-Home-Service-Robot/devel
+
+Name: test_add_markers
+Description: Description of test_add_markers
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

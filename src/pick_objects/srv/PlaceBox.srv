@@ -1,0 +1,7 @@
+# Request
+float64 linear_x
+float64 linear_y
+string info
+---
+# Response
+string rep_info

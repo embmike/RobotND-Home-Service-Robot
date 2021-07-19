@@ -1,0 +1,8 @@
+prefix=/home/robond/projects/Robo-ND/RobotND-Home-Service-Robot/devel
+
+Name: gmapping
+Description: Description of gmapping
+Version: 1.4.2
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

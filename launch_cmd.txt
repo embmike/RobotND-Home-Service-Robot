@@ -1,0 +1,81 @@
+###############################################################
+Home Service Robot
+###############################################################
+
+1. Installation for ROS kinetic
+
+# gmapping
+$ cd /home/robond/ws_home_service_robot/src
+$ git clone -b melodic-devel https://github.com/ros-perception/slam_gmapping
+
+# turtlebot_teleop
+$ cd /home/robond/ws_home_service_robot/src
+$ git clone -b kinetic https://github.com/turtlebot/turtlebot.git
+
+# turtlebot_rviz_launchers
+$ cd /home/robond/ws_home_service_robot/src
+# git clone -b indigo https://github.com/turtlebot/turtlebot_interactions.git
+
+# turtlebot_gazebo
+$ cd /home/robond/ws_home_service_robot/src
+$ git clone -b indigo https://github.com/turtlebot/turtlebot_simulator.git
+$
+$ cd ../
+$ source devel/setup.bash
+$ rosdep -i install gmapping
+$ rosdep -i install turtlebot_teleop
+$ rosdep -i install turtlebot_rviz_launchers
+$ rosdep -i install turtlebot_gazebo
+$ catkin_make
+
+
+2. Create my projects
+
+# pick_objects
+$ cd /home/robond/ws_home_service_robot/src
+$ catkin_create_pkg pick_objects move_base_msgs actionlib roscpp std_msgs message_generation
+
+# Write srv message PlaceBox.srv and RemoveBox.srv
+$ cd ../
+$ catkin_make
+
+# Test messages
+$ rosmsg list
+
+# Write pick_objects.cpp
+$ cd ../
+$ catkin_make
+
+# add_marker
+$ cd /home/robond/ws_home_service_robot/src
+$ catkin_create_pkg add_markers roscpp visualization_msgs pick_objects
+# Write add_markers.cpp
+$ cd ../
+$ catkin_make
+
+
+3. Create lauch scripts
+
+$ cd /home/robond/ws_home_service_robot/src/scripts
+
+$ chmod +x cd test_slam.sh
+$ chmod +x test_navigation.sh
+$ chmod +x pick_objects.sh
+$ chmod +x add_markers.sh
+$ chmod +x home_service.sh
+
+$ ./test_slam.sh
+$ ./test_launch.sh
+$ ./test_navigation.sh
+$ ./pick_objects.sh
+$ ./add_markers.sh
+$ ./home_service.sh
+
+
+4. Zip project
+
+$ cd /home/robond
+$ zip -r home_service_robot.zip ws_home_service_robot
+
+
+
