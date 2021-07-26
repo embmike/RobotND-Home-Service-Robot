@@ -146,10 +146,10 @@ int main(int argc, char** argv)
   RobotPose drop_off_pose {-5.06,  1.96, -0.43, RobotMission::DROP_OFF, "drop-off"};
 
   // Drive bot to the first station to pick an object and pause 5 sec
-  robot.DriveTo(pick_up_pose).PauseFor(5.0);
+  robot.DriveTo(pick_up_pose).PauseFor(pause_5_sec);
 
   // Drive the bot to the second station to drop off the object and pause 1 sec
-  robot.DriveTo(drop_off_pose).PauseFor(1.0);
+  robot.DriveTo(drop_off_pose).PauseFor(pause_1_sec);
 
   // Rpbot message
   ROS_INFO("Robot: 'I need a pause. My battery is drained out. :-( '");
