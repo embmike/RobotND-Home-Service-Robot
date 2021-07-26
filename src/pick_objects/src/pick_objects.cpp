@@ -132,8 +132,8 @@ public:
 int main(int argc, char** argv)
 {
   // Pauses of the robot
-  constexpr double pause_1_sec {1.0};
-  constexpr double pause_5_sec {5.0};
+  constexpr float pause_1_sec {1.0};
+  constexpr float pause_5_sec {5.0};
 
   // Initialize the pick_objects node
   ros::init(argc, argv, "pick_objects");
