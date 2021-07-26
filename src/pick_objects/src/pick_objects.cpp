@@ -29,8 +29,10 @@ struct RobotPose
 class DeliveryRobot final
 {
 private:
-  //tell the action client that we want to spin a thread by default
+  // Tell the action client that we want to spin a thread by default
   MoveBaseClient ac {"move_base", true};
+
+  // Publish messages
   ros::NodeHandle n;
   ros::ServiceClient client_place_box {n.serviceClient<pick_objects::PlaceBox>("/pick_objects/command_place_box")};
   ros::ServiceClient client_remove_box {n.serviceClient<pick_objects::RemoveBox>("/pick_objects/command_remove_box")};
@@ -45,7 +47,7 @@ public:
     }
   }
 
-  const DeliveryRobot& DriveTo(RobotPose pose)
+  const DeliveryRobot& DriveTo(const RobotPose pose)
   {
     if( pose.mission == RobotMission::PICK_UP)
     {
@@ -64,7 +66,7 @@ public:
     // Moving
     move_base_msgs::MoveBaseGoal goal;
 
-    // set up the frame parameters
+    // Set up the frame parameters
     goal.target_pose.header.frame_id = "map";
     goal.target_pose.header.stamp = ros::Time::now();
 
@@ -145,13 +147,13 @@ int main(int argc, char** argv)
   RobotPose pick_up_pose  {-5.56, -5.89, -0.43, RobotMission::PICK_UP,  "pick-up"};
   RobotPose drop_off_pose {-5.06,  1.96, -0.43, RobotMission::DROP_OFF, "drop-off"};
 
-  // Drive bot to the first station to pick an object and pause 5 sec
+  // Drive the bot to the first station to pick an object and pause for 5 sec
   robot.DriveTo(pick_up_pose).PauseFor(pause_5_sec);
 
-  // Drive the bot to the second station to drop off the object and pause 1 sec
+  // Drive the bot to the second station to drop off the object and pause for 1 sec
   robot.DriveTo(drop_off_pose).PauseFor(pause_1_sec);
 
-  // Rpbot message
+  // Robot message
   ROS_INFO("Robot: 'I need a pause. My battery is drained out. :-( '");
 
   // Handle ROS communication events
